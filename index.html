@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Practica1">
+	<head>
+		<meta charset="UTF-8">
+		<title>Practica 1</title>
+	</head>
+	<body ng-controller="otraMadre as first">
+		<input type="text" ng-model="saludo">
+		{{saludo}}
+		<h4>{{first.name}}</h4>
+		<h4>{{first.age}}</h4>
+		<h4>{{first.number}}</h4>
+		<h4>{{first.texto}}</h4>
+		
+		<ul>
+			<li ng-repeat="usr in first.users">
+				{{usr.name}} tiene {{usr.age}} años  y  es de {{usr.pais}}
+			</li>
+		</ul>
+		<button ng-click="first.click()">Clickeame</button>
+		<input type="text" ng-model="search.name">
+		<!-- <input type="text" ng-model="search.$"> --> <!-- BUSCA POR TODO -->
+		<table style="border:1px solid blue;" border="1">
+			<tr ng-repeat="usr in first.users | filter : search | orderBy:'age'" ng-if="usr.age<30">
+				<td>{{$index+1}}</td>
+				<td>{{usr.name}}</td>
+				<td>{{usr.age}}</td>
+				<td>{{usr.pais}}</td>
+				<td><button ng-click="first.envejecer(usr)">Envejecer</button></td>
+			</tr>
+		</table>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</body>
+</html>
