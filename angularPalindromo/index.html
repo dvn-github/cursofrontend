@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Practica1">
+    <head>
+        <meta charset="utf-8">
+            <title>
+                Palindromo
+            </title>
+        </meta>
+    </head>
+    <body ng-controller="otraMadre as first">
+        <div class="modal fade in show" role="dialog" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                            <span aria-hidden="true">
+                                ×
+                            </span>
+                        </button>
+                        <h4 class="modal-title">
+                            Palíndromo
+                        </h4>
+                    </div>
+                    <div class="modal-body">
+                        <label class="sr-only" for="">
+                            Palindromo
+                        </label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <div ng-show="first.palindromo()">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-ok"></span>
+                                </div>
+                                <div class="ng-hide" ng-hide="first.palindromo()">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-remove"></span>
+                                </div>
+                            </div>
+                            <input class="form-control" ng-model="saludo" placeholder="Escribe una palabra para saber si es un palindromo" type="text">
+                        </div>
+                        {{first.voltear(saludo)}}
+                    </div>
+                
+	                <div class="modal-footer">
+	                    <button class="btn btn-default" data-dismiss="modal" type="button">
+	                        Cerrar
+	                    </button>
+	                </div>
+	            </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> 
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+    </body>
+</html>
+<!-- /.modal -->
