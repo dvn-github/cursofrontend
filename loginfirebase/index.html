@@ -5,8 +5,50 @@
         <title>
             Login
         </title>
+
+        <script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyA8OnLB1oK7ljTAsXnyJRh3hbM5RA8AUZw",
+            authDomain: "cursofront-37c00.firebaseapp.com",
+            databaseURL: "https://cursofront-37c00.firebaseio.com",
+            storageBucket: "cursofront-37c00.appspot.com",
+          };
+          firebase.initializeApp(config);
+        </script>
+    
     </head>
     <body>
+     <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+              <li class="active"><a href="/loginfirebase/">Inicio</a></li>
+              <li><a href="/loginfirebase/#/list">List</a></li>
+              <li><a href="/loginfirebase/#/registro">Registro</a></li>
+              
+            </ul>
+          </div>
+        </nav>
+
+        <log></log>
+          <!--<nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down" ng-if="$ctrl.userLoggedIn">
+            <li><a href="#/data">Datos</a></li>
+            <li><a href="#/agregar">Agregar</a></li>
+            <li>Bienvenido!, {{$ctrl.userLoggedIn.password.email}}</li>
+            <li><a ng-click="$ctrl.logout()">Cerrar Sesión</a></li>
+            </ul>
+        </div>-->
+</nav>
+
+
+      </div>
+
 		<div ng-view></div>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,13 +61,24 @@
 
         <!-- Firebase -->
         <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+
         <!-- AngularFire -->
         <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
 		
         <script type="text/javascript" src="app/app.js"></script>
         <script type="text/javascript" src="app/components/add/addComponent.js"></script>
         <script type="text/javascript" src="app/components/list/listComponent.js"></script>
+        
+        <script type="text/javascript" src="app/factory/factory.js"></script>
+        <script type="text/javascript" src="app/components/register/registerComponent.js"></script>
+        <script type="text/javascript" src="app/components/login/loginComponent.js"></script>
+        <script type="text/javascript" src="app/components/nav/nav.js"></script>
+        
         <script type="text/javascript" src="app/routes/routes.js"></script>
+
+        
+        
+        
 
         
 		

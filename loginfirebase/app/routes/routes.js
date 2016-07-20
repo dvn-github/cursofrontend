@@ -13,6 +13,9 @@
 			.when("/list", {
 				template : "<list></list>"
 			})
+			.when("/registro", {
+				template : "<register></register>"
+			})
 			.otherwise({
 				redirectTo : "/" 
 			});
